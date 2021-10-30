@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Streams</title>
-    <link rel="shortcut icon" href="data:image/png;base64, AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbbv+DGW3/mRlt/5kZbf+ZGq6/hIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGa3/ohkt/7/Zbj//2S3/v9lt/6WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGm5/iRlt/74Zbj//2W4//9luP//Zbf++mi4/i4gIPciGhr24hsb9uwbG/bsGhr24CEh9xoAAAAAAAAAAAAAAABnuP5mZLf+/2W4//9luP//Zbj//2S3/v9muP5yGBj2rhMT9v8TE/b/ExP2/xMT9f8YGPWkAAAAAAAAAAAAAAAAb7z/BGW3/tZluP//Zbj//2W4//9lt/7gJzH3ShMT9f8TE/b/ExP2/xMT9v8TE/b/ExP1/CAg9joAAAAAAAAAAAAAAABmuP5GZLf+6GS3/uhkt/7oZbf+UhgY9YQSEvX/ExP2/xMT9v8TE/b/ExP2/xIS9f8aGvZ8AAAAAD4++gQgIPZ6IiL2hiIi9oYgIPZ8KCj5BAAAAAAtLfgUFBT17BMT9v8TE/b/ExP2/xMT9v8VFfXoLCz4DgAAAAAaGvZqEhL1/xMT9v8TE/b/EhL1/xsb9nIAAAAAAAAAABwc9m4SEvX/ExP2/xMT9v8SEvX/HR32ZAAAAAAnJ/gSFRX16hMT9v8TE/b/ExP2/xMT9v8UFPXuJyf4Fp2xlAKNnqUYLC/mfhYW83ATE/VuFxf1aDc3+gIAAAAAGBj1fhIS9f8TE/b/ExP2/xMT9v8TE/b/ExP1/xkZ9YaGn3yIhZ57/4Wee/+Gn3yKAAAAAAAAAAAAAAAAAAAAACMj9zYTE/X8ExP2/xMT9v8TE/b/ExP2/xMT9f9JUshihZ57+IaffP+Gn3z/hZ579oigfiYAAAAAAAAAAAAAAAAAAAAAGBj1oBIS9f8TE/b/ExP2/xMT9f8YGPWmiKB+PIWee/+Gn3z/hp98/4Wee/+HoH06AAAAAAAAAAAAAAAAAAAAACUl9xgVFfXOExP11BMT9dQUFPXQJib3HgAAAACGn3ymhp98/4affP+Gn3ymAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiKB+EIihf0CIoX9AiKB+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AADg/wAA4MMAAOCBAADggQAA8QEAAOeBAADDwwAAgf8AAIAPAACBDwAAgQ8AAMMPAAD//wAA//8AAA==" type="image/png">
-</head>
-<body></body>
-<script>// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -148,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"5kBsU":[function(require,module,exports) {
+})({"jNl9b":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "f2c9685dad4863d1";
-module.bundle.HMR_BUNDLE_ID = "83023f241dc912f1";
+var HMR_ENV_HASH = "90832105792ce31b";
+module.bundle.HMR_BUNDLE_ID = "b1f31d25e0ce69f4";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -462,19 +454,14 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"9sc3H":[function(require,module,exports) {
+},{}],"g9PU7":[function(require,module,exports) {
 var _postMessageStream = require("@metamask/post-message-stream");
-(async ()=>{
-    let worker = new Worker(require("5d8d38b4ce12823c"));
-    const parentStream = new _postMessageStream.WorkerParentPostMessageStream({
-        worker
-    });
-    parentStream.write('hello');
-    parentStream.on('data', (data)=>console.log(data + ', world')
-    );
-})();
+const workerStream = new _postMessageStream.WorkerPostMessageStream();
+workerStream.on('data', (data)=>console.log(data + ', world')
+);
+workerStream.write('test');
 
-},{"@metamask/post-message-stream":"gWN02","5d8d38b4ce12823c":"1ivTZ"}],"gWN02":[function(require,module,exports) {
+},{"@metamask/post-message-stream":"6UNNv"}],"6UNNv":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -502,7 +489,7 @@ Object.defineProperty(exports, "WorkerParentPostMessageStream", {
     }
 });
 
-},{"./WindowPostMessageStream":"eXxwE","./WorkerPostMessageStream":"41AqS","./WorkerParentPostMessageStream":"2wpHW"}],"eXxwE":[function(require,module,exports) {
+},{"./WindowPostMessageStream":"ltm0E","./WorkerPostMessageStream":"bqmCc","./WorkerParentPostMessageStream":"DNYRO"}],"ltm0E":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -550,7 +537,7 @@ const BasePostMessageStream_1 = require("./BasePostMessageStream");
 }
 exports.WindowPostMessageStream = WindowPostMessageStream;
 
-},{"./BasePostMessageStream":"iYGb0"}],"iYGb0":[function(require,module,exports) {
+},{"./BasePostMessageStream":"eeMFX"}],"eeMFX":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -608,7 +595,7 @@ const ACK = 'ACK';
 }
 exports.BasePostMessageStream = BasePostMessageStream;
 
-},{"readable-stream":"5GZXl"}],"5GZXl":[function(require,module,exports) {
+},{"readable-stream":"lcvbj"}],"lcvbj":[function(require,module,exports) {
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = exports;
 exports.Readable = exports;
@@ -617,7 +604,7 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_readable.js":"k8nNR","./lib/_stream_writable.js":"ke4JT","./lib/_stream_duplex.js":"2v0T8","./lib/_stream_transform.js":"h13jY","./lib/_stream_passthrough.js":"berqe"}],"k8nNR":[function(require,module,exports) {
+},{"./lib/_stream_readable.js":"g1lfx","./lib/_stream_writable.js":"eJuo2","./lib/_stream_duplex.js":"PMIEX","./lib/_stream_transform.js":"5u5DE","./lib/_stream_passthrough.js":"l3tz2"}],"g1lfx":[function(require,module,exports) {
 var global = arguments[3];
 var process = require("process");
 // Copyright Joyent, Inc. and other Node contributors.
@@ -1463,7 +1450,7 @@ function indexOf(xs, x) {
     return -1;
 }
 
-},{"process":"h7Qgs","process-nextick-args":"83F5A","isarray":"1kiEL","events":"4jWIL","./internal/streams/stream":"c7mkt","safe-buffer":"dM9kn","core-util-is":"5nlfU","inherits":"99uXF","util":"ldQOs","./internal/streams/BufferList":"lGeHh","./internal/streams/destroy":"kyVf9","./_stream_duplex":"2v0T8","string_decoder/":"eHyAA"}],"h7Qgs":[function(require,module,exports) {
+},{"process":"hgNCW","process-nextick-args":"beuyz","isarray":"1Xa57","events":"3fSwE","./internal/streams/stream":"kKLKE","safe-buffer":"19C6n","core-util-is":"7j96Y","inherits":"exGtu","util":"e46NV","./internal/streams/BufferList":"cviLc","./internal/streams/destroy":"7QIGI","./_stream_duplex":"PMIEX","string_decoder/":"b2NW4"}],"hgNCW":[function(require,module,exports) {
 // shim for using process in browser
 var process = module.exports = {
 };
@@ -1612,7 +1599,7 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"83F5A":[function(require,module,exports) {
+},{}],"beuyz":[function(require,module,exports) {
 var process = require("process");
 'use strict';
 if (!process.version || process.version.indexOf('v0.') === 0 || process.version.indexOf('v1.') === 0 && process.version.indexOf('v1.8.') !== 0) module.exports = nextTick;
@@ -1647,14 +1634,14 @@ function nextTick(fn, arg1, arg2, arg3) {
     }
 }
 
-},{"process":"h7Qgs"}],"1kiEL":[function(require,module,exports) {
+},{"process":"hgNCW"}],"1Xa57":[function(require,module,exports) {
 var toString = {
 }.toString;
 module.exports = Array.isArray || function(arr) {
     return toString.call(arr) == '[object Array]';
 };
 
-},{}],"4jWIL":[function(require,module,exports) {
+},{}],"3fSwE":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -2009,10 +1996,10 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
     else throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
 }
 
-},{}],"c7mkt":[function(require,module,exports) {
+},{}],"kKLKE":[function(require,module,exports) {
 module.exports = require('events').EventEmitter;
 
-},{"events":"4jWIL"}],"dM9kn":[function(require,module,exports) {
+},{"events":"3fSwE"}],"19C6n":[function(require,module,exports) {
 /* eslint-disable node/no-deprecated-api */ var buffer = require('buffer');
 var Buffer = buffer.Buffer;
 // alternative to using Object.keys for old browsers
@@ -2052,7 +2039,7 @@ SafeBuffer.allocUnsafeSlow = function(size) {
     return buffer.SlowBuffer(size);
 };
 
-},{"buffer":"6wndN"}],"6wndN":[function(require,module,exports) {
+},{"buffer":"bn3UN"}],"bn3UN":[function(require,module,exports) {
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -3281,7 +3268,7 @@ var hexSliceLookupTable = function() {
     return table;
 }();
 
-},{"base64-js":"jNZ2U","ieee754":"6nbpN"}],"jNZ2U":[function(require,module,exports) {
+},{"base64-js":"jUatZ","ieee754":"d52Tt"}],"jUatZ":[function(require,module,exports) {
 'use strict';
 exports.byteLength = byteLength;
 exports.toByteArray = toByteArray;
@@ -3381,7 +3368,7 @@ function fromByteArray(uint8) {
     return parts.join('');
 }
 
-},{}],"6nbpN":[function(require,module,exports) {
+},{}],"d52Tt":[function(require,module,exports) {
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */ exports.read = function(buffer, offset, isLE, mLen, nBytes) {
     var e, m;
     var eLen = nBytes * 8 - mLen - 1;
@@ -3451,7 +3438,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
     buffer[offset + i - d] |= s * 128;
 };
 
-},{}],"5nlfU":[function(require,module,exports) {
+},{}],"7j96Y":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3536,7 +3523,7 @@ function objectToString(o) {
     return Object.prototype.toString.call(o);
 }
 
-},{"buffer":"6wndN"}],"99uXF":[function(require,module,exports) {
+},{"buffer":"bn3UN"}],"exGtu":[function(require,module,exports) {
 if (typeof Object.create === 'function') // implementation from standard node.js 'util' module
 module.exports = function inherits(ctor, superCtor) {
     if (superCtor) {
@@ -3563,10 +3550,10 @@ module.exports = function inherits1(ctor, superCtor) {
     }
 };
 
-},{}],"ldQOs":[function(require,module,exports) {
+},{}],"e46NV":[function(require,module,exports) {
 "use strict";
 
-},{}],"lGeHh":[function(require,module,exports) {
+},{}],"cviLc":[function(require,module,exports) {
 'use strict';
 /*<replacement>*/ function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
@@ -3636,7 +3623,7 @@ module.exports = (function() {
     return BufferList;
 })();
 
-},{"safe-buffer":"dM9kn"}],"kyVf9":[function(require,module,exports) {
+},{"safe-buffer":"19C6n"}],"7QIGI":[function(require,module,exports) {
 'use strict';
 /*<replacement>*/ var processNextTick = require('process-nextick-args');
 /*</replacement>*/ // undocumented cb() API, needed for core, not for public API
@@ -3684,7 +3671,7 @@ module.exports = {
     undestroy: undestroy
 };
 
-},{"process-nextick-args":"83F5A"}],"2v0T8":[function(require,module,exports) {
+},{"process-nextick-args":"beuyz"}],"PMIEX":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3773,7 +3760,7 @@ function forEach(xs, f) {
     for(var i = 0, l = xs.length; i < l; i++)f(xs[i], i);
 }
 
-},{"process-nextick-args":"83F5A","core-util-is":"5nlfU","inherits":"99uXF","./_stream_readable":"k8nNR","./_stream_writable":"ke4JT"}],"ke4JT":[function(require,module,exports) {
+},{"process-nextick-args":"beuyz","core-util-is":"7j96Y","inherits":"exGtu","./_stream_readable":"g1lfx","./_stream_writable":"eJuo2"}],"eJuo2":[function(require,module,exports) {
 var global = arguments[3];
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -4296,7 +4283,7 @@ Writable.prototype._destroy = function(err, cb) {
     cb(err);
 };
 
-},{"process-nextick-args":"83F5A","core-util-is":"5nlfU","inherits":"99uXF","util-deprecate":"8FPAC","./internal/streams/stream":"c7mkt","safe-buffer":"dM9kn","./internal/streams/destroy":"kyVf9","./_stream_duplex":"2v0T8"}],"8FPAC":[function(require,module,exports) {
+},{"process-nextick-args":"beuyz","core-util-is":"7j96Y","inherits":"exGtu","util-deprecate":"lQffA","./internal/streams/stream":"kKLKE","safe-buffer":"19C6n","./internal/streams/destroy":"7QIGI","./_stream_duplex":"PMIEX"}],"lQffA":[function(require,module,exports) {
 var global = arguments[3];
 /**
  * Module exports.
@@ -4349,7 +4336,7 @@ var global = arguments[3];
     return String(val).toLowerCase() === 'true';
 }
 
-},{}],"eHyAA":[function(require,module,exports) {
+},{}],"b2NW4":[function(require,module,exports) {
 'use strict';
 var Buffer = require('safe-buffer').Buffer;
 var isEncoding = Buffer.isEncoding || function(encoding) {
@@ -4611,7 +4598,7 @@ function simpleEnd(buf) {
     return buf && buf.length ? this.write(buf) : '';
 }
 
-},{"safe-buffer":"dM9kn"}],"h13jY":[function(require,module,exports) {
+},{"safe-buffer":"19C6n"}],"5u5DE":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -4783,7 +4770,7 @@ function done(stream, er, data) {
     return stream.push(null);
 }
 
-},{"./_stream_duplex":"2v0T8","core-util-is":"5nlfU","inherits":"99uXF"}],"berqe":[function(require,module,exports) {
+},{"./_stream_duplex":"PMIEX","core-util-is":"7j96Y","inherits":"exGtu"}],"l3tz2":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -4821,7 +4808,7 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
     cb(null, chunk);
 };
 
-},{"./_stream_transform":"h13jY","core-util-is":"5nlfU","inherits":"99uXF"}],"41AqS":[function(require,module,exports) {
+},{"./_stream_transform":"5u5DE","core-util-is":"7j96Y","inherits":"exGtu"}],"bqmCc":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -4864,7 +4851,7 @@ const enums_1 = require("./enums");
 }
 exports.WorkerPostMessageStream = WorkerPostMessageStream;
 
-},{"./BasePostMessageStream":"iYGb0","./enums":"i4R96"}],"i4R96":[function(require,module,exports) {
+},{"./BasePostMessageStream":"eeMFX","./enums":"adgZP"}],"adgZP":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -4872,7 +4859,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.DEDICATED_WORKER_NAME = void 0;
 exports.DEDICATED_WORKER_NAME = 'dedicatedWorker';
 
-},{}],"2wpHW":[function(require,module,exports) {
+},{}],"DNYRO":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -4915,65 +4902,5 @@ const enums_1 = require("./enums");
 }
 exports.WorkerParentPostMessageStream = WorkerParentPostMessageStream;
 
-},{"./BasePostMessageStream":"iYGb0","./enums":"i4R96"}],"1ivTZ":[function(require,module,exports) {
-let workerURL = require('./helpers/get-worker-url');
-let bundleURL = require('./helpers/bundle-url');
-let url = bundleURL.getBundleURL('bfm6V') + "WORKERFS.e0ce69f4.js";
-module.exports = workerURL(url, bundleURL.getOrigin(url), false);
+},{"./BasePostMessageStream":"eeMFX","./enums":"adgZP"}]},["jNl9b","g9PU7"], "g9PU7", "parcelRequireccb8")
 
-},{"./helpers/get-worker-url":"1bH9I","./helpers/bundle-url":"bmzLE"}],"1bH9I":[function(require,module,exports) {
-"use strict";
-module.exports = function(workerUrl, origin, isESM) {
-    if (origin === self.location.origin) // If the worker bundle's url is on the same origin as the document,
-    // use the worker bundle's own url.
-    return workerUrl;
-    else {
-        // Otherwise, create a blob URL which loads the worker bundle with `importScripts`.
-        var source = isESM ? 'import ' + JSON.stringify(workerUrl) + ';' : 'importScripts(' + JSON.stringify(workerUrl) + ');';
-        return URL.createObjectURL(new Blob([
-            source
-        ], {
-            type: 'application/javascript'
-        }));
-    }
-};
-
-},{}],"bmzLE":[function(require,module,exports) {
-"use strict";
-var bundleURL = {
-};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}]},["5kBsU","9sc3H"], "9sc3H", "parcelRequireccb8")
-
-</script>
-</html>
